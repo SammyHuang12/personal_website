@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&family=Noto+Sans+TC:wght@100..900&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&family=Noto+Sans+TC:wght@100..900&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    font-family: "Noto Sans TC", sans-serif;
+    line-height:1.5;
+}
+
+.wrap{
+    margin: 0 auto;    
+}
+
+.header-bg{
+    border-bottom: 1px solid #F1F1F1;
+}
+
+.header{
+    position:relative;
+    padding: 32px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1296px;
+    margin: 0 auto;    
+}
+
+.logo{
+    position:absolute;
+    left: 0px;
+}
+
+.menu{
+    display: flex;
+    column-gap: 40px;       
+}
+
+.menu a{
+    color: #000;
+    padding: 4px 8px;
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+    position: relative;
+}
+
+.menu a:hover::before{
+    position: absolute;
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid #919191;
+    border-left: 1px solid #919191;
+    -webkit-box-reflect: below 17px;
+    top: 0;
+    left: 0;
+}
+
+.menu a:hover::after{
+    position: absolute;
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid #919191;
+    border-right: 1px solid #919191;
+    -webkit-box-reflect: below 17px;
+    top: 0;
+    right: 0;
+}
+
+.menu a:hover{
+    font-weight: 600;
+}
+
+.navbar-btn {
+    display: none;
+}
+
+.current{
+    cursor: auto;
+}
+
+.footer-bg{
+    background-image: url('../images/footer-bg-lg.png');
+    background-position: center;
+    background-size: cover;
+    padding: 0 12px;
+}
+
+.footer{
+    font-size: 20px;
+    max-width: 1296px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 0;
+}
+
+.footer-about{
+    max-width: 686px;
+    color: #3B3B3B;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    font-size: 20px;
+}
+
+.footer-about a{
+    color: #919191;
+    line-height: 24px;
+    display: block;
+}
+
+.footer-about img{
+    width: 120px;
+}
+
+.footer-social{
+    max-width: 306px;
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+
+.footer-social li a{    
+    display: flex;
+    align-items: center;
+    color:#3B3B3B;
+    padding:7.2px 59px 7.2px 24px;
+    padding:7.2px 24px;
+    border-radius: 8px;
+    border: 1px solid #C1C1C1;
+    background-color: #fff;
+}
+
+.footer-social img{
+    padding-right: 8px;
+}
+
+.footer-social a:hover{
+    color: #fff;
+    background-color: #000;
+}
+.effect li:nth-child(1) a{
+    color: #fff;
+    background-color: #000;    
+}
+
+.navbar-btn .close{
+    display:none;
+}
+
+.current{
+    font-weight: 600;
+    cursor: auto;
+}
+
+@media (max-width: 767px) {
+    .header{
+        margin: 0 auto;
+        padding: 8px 12px;
+        justify-content: space-between;
+    }
+    
+    .logo{
+        width: 74px;
+        position:static;
+        left:12px;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .navbar-btn {
+        display: block;
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+        width: 39px;
+        height: 39px;
+    }
+
+    .navbar-btn span {
+          font-size: 36px;
+    }
+
+    .active{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+        position:absolute;
+        top: 56px;
+        left: 50%;
+        transform: translate(-50%);
+        background-color: white;
+        width: 100%;
+        z-index: 10;
+        padding: 40px;
+    }
+
+    .active a{
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-bg{
+        background-image: url('../images/footer-bg-sm.png');
+    }
+
+    .footer{
+        padding: 40px 12px;
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    .footer-about{
+        font-size: 16px;
+        align-items: center;
+    }
+    
+    .footer-social{
+        width: 100%;
+    }
+}
